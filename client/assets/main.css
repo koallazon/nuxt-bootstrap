@@ -1,0 +1,11 @@
+.nuxt-link-exact-active {
+    border-bottom: 2px solid currentColor;
+} 
+.page-enter-active, .page-leave-active {
+    transition: opacity .3s;
+}
+
+/* 페이지 진입 전, 진출 후 상태일 때 */
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
