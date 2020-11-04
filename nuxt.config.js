@@ -24,7 +24,11 @@ export default {
     './assets/main.css'
   ],
   plugins: [
+    '~/plugins/i18n.js'
   ],
+  router: {
+    middleware: 'i18n'
+  },
   components: true,
   /*
   ** Nuxt.js dev-modules
@@ -62,5 +66,8 @@ export default {
   srcDir: 'client/',
   typescript: {
     formatter: 'default'
+  },
+  generate: {
+    routes: ['/', '/about', '/en', '/en/about']
   }
 }

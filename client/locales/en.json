@@ -1,0 +1,8 @@
+{
+    "head": {
+        "menu1": "HOME",
+        "menu2": "ABOUT",
+        "menu3": "LIVE-INDEX",
+        "menu4": "LIVE-{count}"
+    }
+}

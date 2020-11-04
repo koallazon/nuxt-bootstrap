@@ -2,10 +2,18 @@
   <div>
     <header>
       <nav>
-        <nuxt-link to="/">Index</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <nuxt-link to="/live">Live-index</nuxt-link>
-        <nuxt-link to="/live/1">Live-1</nuxt-link>
+        <Nuxt-link :to="$i18n.path('')" exact>
+          {{ $t('head.menu1') }}
+        </Nuxt-link>
+        <Nuxt-link :to="$i18n.path('about')" exact>
+          {{ $t('head.menu2') }}
+        </Nuxt-link>
+          <NuxtLink v-if="$i18n.locale === 'ko'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
+            KOR
+          </NuxtLink>
+          <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
+            ENG
+          </NuxtLink>
       </nav>
     </header>
     <Nuxt />
